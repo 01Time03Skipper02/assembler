@@ -11,9 +11,10 @@ start:
     mov AX, data
     mov DS, AX
     mov CX, len
+    mov DI, 255
     loop1:
         mov AX, arr[SI]
-        CMP AX, Dx
+        CMP AX, DI
         jg skip
         mov DI, AX
         skip:
